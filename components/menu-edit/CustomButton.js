@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, TouchableHighlight, TouchableOpacity } from 'react-native';
 
-export default class MenuEditor extends Component {
+export default class CustomButton extends Component {
 
   render() {
 
     return (
-      <TouchableOpacity style={styles.container}
+      <TouchableOpacity style={[styles.container, this.props.style]}
+        disabled={this.props.disabled}
         onPress={this.props.onPress}
         activeOpacity={0.7}>
 
